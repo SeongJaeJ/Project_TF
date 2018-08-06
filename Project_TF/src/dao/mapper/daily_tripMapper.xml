@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.Daily_TripDao">
+	<insert id="insertDailyTrip" parameterType="Daily_Trip">
+		insert into daily_trip values(0, #{trip_board_num}, #{reserve_stay_index},
+		#{daily_trip_start_address}, #{daily_trip_start_lngy}, #{daily_trip_start_latx},
+		#{daily_trip_via1_address}, #{daily_trip_via1_lngy}, #{daily_trip_via1_latx},
+		#{daily_trip_via2_address}, #{daily_trip_via2_lngy}, #{daily_trip_via2_latx},
+		#{daily_trip_via3_address}, #{daily_trip_via3_lngy}, #{daily_trip_via3_latx},
+		#{daily_trip_via4_address}, #{daily_trip_via4_lngy}, #{daily_trip_via4_latx},
+		#{daily_trip_via5_address}, #{daily_trip_via5_lngy}, #{daily_trip_via5_latx},
+		#{daily_trip_end_address}, #{daily_trip_end_lngy}, #{daily_trip_end_latx},
+		#{daily_trip_memo}, now())
+		<selectKey resultType="int" keyProperty="daily_trip_index" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	
+	<update id="updateDailyTrip" parameterType="Daily_Trip">
+	
+	</update>
+	
+	<delete id="deleteOneDailyTrip" parameterType="int">
+	
+	</delete>
+	
+	<delete id="deleteAllDailyTrip" parameterType="int">
+	
+	</delete>
+	
+	<select id="selectOneDailyTrip" parameterType="int">
+	
+	</select>
+	
+	<select id="selectAllDailyTrip" parameterType="int">
+	
+	</select>
+	
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.Road_FinderDao">
+	<insert id="insertRoadFinder" parameterType="Road_Finder">
+		insert into road_finder values(0, #{daily_trip_index}, #{road_finder_transport_type},
+		#{road_finder_filename}, now())
+	</insert>
+	
+	<update id="updateRoadFinder" parameterType="Road_Finder">
+	
+	</update>
+	
+	<delete id="deleteOneRoadFinder" parameterType="int">
+	
+	</delete>
+	
+	<delete id="deleteAllRoadFinder" parameterType="int">
+	
+	</delete>
+	
+	<select id="selectOneRoadFinder" parameterType="int">
+	
+	</select>
+	
+	<select id="selectAllRoadFinder" parameterType="int">
+	
+	</select>
+
+</mapper>
