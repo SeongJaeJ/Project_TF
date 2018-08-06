@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="../test/fileUpload" method="post" enctype="multipart/form-data">
-		<input multiple="multiple" type="file" name="files" value="파일업로드">
+	<form name="filelist" action="../test/fileUpload" method="post" enctype="multipart/form-data">
+		<input multiple="multiple" type="file" name="files[]" value="파일업로드">
 		<input type="submit" value="전송">
 	</form>
 </body>
